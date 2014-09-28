@@ -38,11 +38,7 @@
             }
         });
 
-        $(document).bind('click', function(event){
-            if(!$(event.target).closest(settings['selector']).length){
-                methods.close();
-            }
-        });
+
 
         return this.each(function(){
             $(this).css({'width': $(settings['box']).width()}); // Width needs to be set otherwise popbox will not move when window resized.
