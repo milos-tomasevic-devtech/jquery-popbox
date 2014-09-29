@@ -28,7 +28,7 @@
             },
 
             close: function(){
-                $(settings['box']).fadeOut("fast");
+                $(settings['box']).fadeOut( 2600, "linear");
             }
         };
 
@@ -46,7 +46,8 @@
             $('.box').mouseleave(function(event) {
                 if($('.box').is(":visible")) {
                     event.preventDefault();
-                    methods.close();
+                    setTimeout(methods.close, 2000);
+
                 }
             });
 
